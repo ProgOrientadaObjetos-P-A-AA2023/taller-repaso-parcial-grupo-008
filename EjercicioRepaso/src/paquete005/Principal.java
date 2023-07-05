@@ -13,6 +13,13 @@ import paquete003.BilleteraPagos;
 public class Principal {
     public static void main(String[] args) {
         BilleteraPagos pago = new BilleteraPagos();
+        
+        ArrayList<Transporte> lista = new ArrayList<>();
+        lista.add(bus);
+        lista.add(taxi);
+        lista.add(t1);
+        
+        
         System.out.println(pago);
     }
 }
