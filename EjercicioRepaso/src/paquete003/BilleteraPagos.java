@@ -5,54 +5,46 @@
 package paquete003;
 
 import paquete001.Persona;
-import paquete004.PagoAguaPotable;
-import paquete004.PagoLuzElectrica;
-import paquete004.PagoPredial;
-import paquete004.PagoTelefonoConvencional;
+import paquete004.*;
+import paquete003.*;
 
 /**
  *
  * @author reroes
  */
 public class BilleteraPagos {
-    
-    
-    
+
     public Persona persona;
-    public double gastoPagos;
-    public String mes;
-    public PagoAguaPotable aguaCasa;
-    public PagoAguaPotable aguaComercio;
-    public PagoLuzElectrica luzCasa;
-    public PagoLuzElectrica luzComercio;
-    public PagoPredial casa1;
-    public PagoPredial casa2;
-    public PagoTelefonoConvencional telefonoCasa;
-    public PagoTelefonoConvencional telefonoFinca;
-    
-    public BilleteraPagos(Persona p){
+    public Ciudad ciudad;
+    public ArrayList<Pago> listaPagos;
+
+    public BilleteraPagos(Persona p, Ciudad c, ArrayList<Pago> lP) {
         persona = p;
-        
-        
+        ciudad = c;
+        listaPagos = lP;
     }
-    
-    
-    
-    
-    public String toString(){
+
+    @Override
+    public String toString() {
         /*
             Se debe presentar el reporte que incluya
             información correspondiente oportuna
-        */
-        
-        
-        
-        
-        
-        
-        
-        
-        return "Presentar Reporte";
+         */
+
+        String cadena = String.format("\tBilletera de Pagos\n"
+                + "Usuario: %s\n"
+                + "Ciudad: %s\n"
+                + "Lista de pagos: \n",
+                persona,
+                ciudad);
+
+        for (int i = 0; i < listaPagos.size(); i++) {
+
+            cadena = String.format("%s\n", listaPagos.get(i));
+
+        }
+
+        return cadena;
     }
-    
+
 }
