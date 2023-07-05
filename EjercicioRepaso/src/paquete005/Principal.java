@@ -19,7 +19,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        ArrayList<Pago> listaPagos = new ArrayList<> ;
+        ArrayList<Pago> listaPagos = new ArrayList<> ();
 
         /*private String tipoPagoAguaPotable;
     private double tarifaFija = 2.20;
