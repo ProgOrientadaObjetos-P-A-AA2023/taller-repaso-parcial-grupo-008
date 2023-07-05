@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package paquete005;
+import java.util.ArrayList;
 
 import paquete003.BilleteraPagos;
+import paquete004.Pago;
 
 /**
  *
@@ -12,9 +14,15 @@ import paquete003.BilleteraPagos;
  */
 public class Principal {
     public static void main(String[] args) {
-        BilleteraPagos pago = new BilleteraPagos();
         
-        ArrayList<Transporte> lista = new ArrayList<>();
+        
+        BilleteraPagos pago = new BilleteraPagos();
+            
+        
+        
+        
+        
+        ArrayList<Pago> lista = new ArrayList<>();
         lista.add(bus);
         lista.add(taxi);
         lista.add(t1);

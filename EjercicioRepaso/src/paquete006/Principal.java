@@ -4,6 +4,9 @@
  */
 package paquete006;
 
+
+import paquete001.Persona;
+import paquete002.Ciudad;
 import paquete003.BilleteraPagos;
 
 /**
@@ -12,7 +15,14 @@ import paquete003.BilleteraPagos;
  */
 public class Principal {
     public static void main(String[] args) {
-        BilleteraPagos pago = new BilleteraPagos();
+        Ciudad c = new Ciudad("Loja");
+        Persona  p = new Persona("Juan", "Andrade", 19, "1100594",c);
+        
+        BilleteraPagos pago = new BilleteraPagos(p);
+        
+        
+        
+        
         System.out.println(pago);
     }
 }

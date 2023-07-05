@@ -15,6 +15,9 @@ import paquete004.PagoTelefonoConvencional;
  * @author reroes
  */
 public class BilleteraPagos {
+    
+    
+    
     public Persona persona;
     public double gastoPagos;
     public String mes;
@@ -27,11 +30,28 @@ public class BilleteraPagos {
     public PagoTelefonoConvencional telefonoCasa;
     public PagoTelefonoConvencional telefonoFinca;
     
+    public BilleteraPagos(Persona p){
+        persona = p;
+        
+        
+    }
+    
+    
+    
+    
     public String toString(){
         /*
             Se debe presentar el reporte que incluya
             información correspondiente oportuna
         */
+        
+        
+        
+        
+        
+        
+        
+        
         return "Presentar Reporte";
     }
     

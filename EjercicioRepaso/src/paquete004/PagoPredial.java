@@ -11,11 +11,44 @@ import paquete002.Propiedad;
  *
  * @author reroes
  */
-public class PagoPredial {
-    public double calcularPago(){
-        double valorPropiedad = 56000;
-        double porcentaje = 10;
-        double pago = valorPropiedad - ((valorPropiedad*porcentaje)/100);
-        return pago;
+public class PagoPredial extends Pago {
+
+    private double valorPropiedad;
+    private double porcentaje;
+    //private double pago;
+
+    public void establecerValorPropiedad(double valorPropiedad) {
+        this.valorPropiedad = valorPropiedad;
     }
+
+    public void establecerPorcentaje(double porcentaje) {
+        this.porcentaje = porcentaje;
+    }
+
+    @Override
+    public void calcularPago() {
+        valorPropiedad = 56000;
+        porcentaje = 10;
+        pago = valorPropiedad - ((valorPropiedad * porcentaje) / 100);
+
+    }
+
+    public double obtenerValorPropiedad() {
+        return valorPropiedad;
+    }
+
+    public double obtenerPorcentaje() {
+        return porcentaje;
+    }
+    
+     @Override
+    public String toString() {
+        String mensaje = "Pago predial : \n";
+
+        mensaje = String.format("%s\nPago total predial: %.2f\n",
+                mensaje,
+                pago);
+        return mensaje;
+    }
+
 }
